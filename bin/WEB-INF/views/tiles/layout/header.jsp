@@ -1,0 +1,1 @@
+<h1>Spring - Tiles integration</h1>

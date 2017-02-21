@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="base-template" template="/WEB-INF/views/tiles/layout/template.jsp">
+		<put-attribute name="title" value="Spring Tiles integration" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/tiles/layout/menu.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/tiles/layout/unimplemented.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/layout/footer.jsp" />
+	</definition>
+
+	<definition name="home" extends="base-template">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="content" value="/WEB-INF/views/tiles/content/home.jsp" />
+	</definition>
+
+	<definition name="home.wrong" extends="base-template">
+		<put-attribute name="title" value="Home incorrect" />
+		<put-attribute name="content" value="/WEB-INF/views/tiles/layout/unimplemented.jsp" />
+	</definition>
+
+	<definition name="*" extends="base-template">
+    	<put-attribute name="content" value="/WEB-INF/views/tiles/content/{1}.jsp" />
+	</definition>
+	
+	<definition name="contact" extends="base-template">
+		<put-attribute name="title" value="Contact us" />
+		<put-attribute name="content" value="/WEB-INF/views/tiles/content/contact.jsp" />
+	</definition>
+
+</tiles-definitions>  
+ 

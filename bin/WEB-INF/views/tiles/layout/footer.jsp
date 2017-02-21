@@ -1,0 +1,1 @@
+&copy; Spring Tiles integration footer 
